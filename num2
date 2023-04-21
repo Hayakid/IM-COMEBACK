@@ -1,0 +1,53 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+double s, t; // Расстояние в метрах, время в секундах, по системе СИ
+cin >> s >> t;
+double v = s / t;
+cout << fixed << v << " м/c\n";
+return 0;
+}
+
+#2
+seconds_from = hours*3600 + minutes*60 + seconds;
+seconds_to = hours1*3600 + minutes1*60 + seconds1;
+
+а дальше посчитать продолжительность в секундах:
+seconds_length = seconds_to - seconds_from;
+if (seconds_length < 0) seconds_length += 24*3600;
+
+и перевести её в минуты с округлением в большую сторону:
+minutes_length = ceil(seconds_length / 60);
+#3
+// benzin.cpp
+// сравнительную таблицу со стоимостью поездки на разных видах бензина.
+#include iostream // - имена iostream и iomanip нужно заключить в <>
+#include iomanip
+using namespace std;
+int main()
+{
+setlocale(LC_ALL, "Russian");
+float length, consumption, petrol_1, petrol_2, petrol_3, value;
+float cost_petrol_1, cost_petrol_2, cost_petrol_3;
+cout << "Введите расстояние: ";
+cin >> length;
+cout << "Введите расход бензина на 100 км.: ";
+cin >> consumption;
+cout << "Введите стоимость первого вида бензина: ";
+cin >> petrol_1;
+cout << "Введите стоимость второго вида бензина: ";
+cin >> petrol_2;
+cout << "Введите стоимость третьего вида бензина: ";
+cin >> petrol_3;
+cout << "" << endl << endl;
+value = (length / 100) * consumption;
+cost_petrol_1 = value * petrol_1;
+cost_petrol_2 = value * petrol_2;
+cost_petrol_3 = value * petrol_3;
+cout << setw(35) << setiosflags(ios::left) << "Стоимость первого вида топлива: " << setw(9) << cost_petrol_1 << endl
+<< setw(35) << "Стоимость второго вида топлива: " << setw(9) << cost_petrol_2 << endl
+<< setw(35) << "Стоимость третьего вида топлива: " << setw(9) << cost_petrol_3 << endl << endl;
+return 0;
+}

@@ -1,0 +1,33 @@
+#include <iostream>
+				//1
+using namespace std;
+int main() {
+    int s, m, h = 0;
+    cin >> s;
+    m = s * 60;
+    h = s * 60 * 60;
+    cout << s << " секунд = " << m << " минут = " << h << "часов \n";
+}
+//2
+using namespace std;
+
+int main()
+{
+    double money, b;
+    int a;
+    setlocale(LC_ALL, "Russian");
+    cout << "Введите денежную еденицу" << endl;
+    cin >> money;
+    a = money;
+    b = (money - a) * 100;
+    cout << a << " гривень  " << b << "  копеек" << endl;
+    return 0;
+}
+            //3
+void main()
+{
+    setlocale(LC_ALL, "rus");
+    int n, w = 0; std::cin >> n;
+    while (n >= 7) { w++; n -= 7; }
+    std::cout << w << " недель(и) " << n << " дня(ей)\n";
+}

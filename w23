@@ -1,0 +1,33 @@
+#include <iostream>
+#include <conio.h>
+using namespace::std;
+int main()
+{
+    const int time = 86400;
+    int begin_hours, begin_min, begin_sec;
+    int end_hours, end_min, end_sec;
+    cout << "Enter h,min,sec" << endl;
+    cin >> begin_hours >> begin_min >> begin_sec;
+ 
+    double tmp = begin_hours * 3600 + begin_min * 60 + begin_sec;
+    tmp = time - tmp;
+    end_hours = tmp / 3600;
+    end_min = tmp / 60 - end_hours * 60;
+    end_sec = tmp - end_min * 60 - end_hours * 3600;
+    cout << "before the end of the day left " << end_hours << " h " << end_min << " min " << end_sec << " sec" << endl;
+}
+//2
+#include <iostream>
+ 
+int main() {
+    int seconds, hours, minutes;
+    std::cin >> seconds;
+    
+    minutes = seconds / 60;
+    hours = minutes / 60;
+    
+    std::cout << seconds << " seconds is equivalent to " << hours << " hours " << (minutes%60) 
+     << " minutes " << (seconds%60) << " seconds.";
+ 
+    return 0;
+}
